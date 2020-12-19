@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nơi tình yêu bắt đầu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <!-- em sử dụng link này dẫn đến font chữ của google giúp nhúng trực tiếp vào web của mình mà không cần máy tính phải tải font về -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!--fontawesome là nơi lưu icon trực tuyến để giảm thiếu việc lưu trữ tại máy tính-->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://manh1403.blogspot.com/favicon.ico' rel='icon' type='image/x-icon'/>
+    <!--đây là icon hiển thị ở trên đầu trang web , em lấy icon này trực tiếp từ trang blog của em-->
+</head>
+
+<body>
+    <div class="logo"><img class="logo-img"
+            src="./a.jpg"
+            alt="đây là ảnh đại diện lấy từ trang facebook của tôi">
+        <!--hình ảnh được dùng làm logo được dẫn link trực tiếp từ trang facebook cá nhân của em-->
+    </div>
+    <div id="header">
+        <div>Chào mừng bạn đã đến với blog của Mạnh</div>
+        <div>Đây sẽ là nơi mình đăng tải các kiến thức liên quan đến Frontend.</div>
+        <div id="menubar">
+            <ul id="menu">
+                <li>
+                    <a href="#">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="#">HTML là gì ?</a></li>
+                        <li><a href="#">Yếu tố ngữ nghĩa</a></li>
+                        <li><a href="#">Danh sách thẻ</a></li>
+                        <li><a href="#">Mẫu html </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="#">CSS là gì ?</a></li>
+                        <li><a href="#">CSS selector</a></li>
+                        <li><a href="#">CSS display</a></li>
+                        <li><a href="#">CSS transition </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">JAVASCRIPT</a>
+                    <ul class="submenu">
+                        <li><a href="#">JAVASCRIPT là gì ?</a></li>
+                        <li><a href="#">Biến trong JS</a></li>
+                        <li><a href="#">Sự kiện trong JS</a></li>
+                        <li><a href="#">Vòng lặp JS </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">JQUERY</a>
+                    <ul class="submenu">
+                        <li><a href="#">JQUERY là gì ?</a></li>
+                        <li><a href="#">JQUERY selector</a></li>
+                        <li><a href="#">JQUERY event</a></li>
+                        <li><a href="#">JQUERY method </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">BOOTSTRAP</a>
+                    <ul class="submenu">
+                        <li><a href="#">BOOTSTRAP là gì ?</a></li>
+                        <li><a href="#">BS grid</a></li>
+                        <li><a href="#">BS typography</a></li>
+                        <li><a href="#">BS table </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="section">
+        <div id="main">
+            <div class="content">
+                <div class="content-header">
+                    <div class="content-title">Sử dụng CSS Flexbox căn bản</div>
+                    <div class="content-title">phần 1 </div>
+                    <div class="content-info">
+                        <span class="content-time"><i class="far fa-clock"></i> 28/4/2020</span>
+                        <span class="content-author">Đức Mạnh</span>
+                    </div>
+                </div>
+                <div class="content-section">
+                    <p>Trong các phiên bản CSS trước mỗi khi chúng ta muốn hiển thị nhiều phần tử nằm trên cùng một dòng
+                        thì phải sử dụng thuộc tính <span class="text">float </span> kèm theo đó là <span
+                            class="text">clear float </span> để chia cột . Tuy nhiên cách làm này chỉ phù hợp nếu như
+                        bạn muốn thiết kế web trên máy tính , còn khi sử dụng điện thoại truy cập thì các phần tử hiển
+                        thị sẽ rất lộn xộn.</p>
+                    <br>
+                    <p>Trong thời đại công nghiệp 4.0 , khi mà mọi người thường có xu hướng làm mọi thứ trên điện thoại
+                        , từ mua sắm đến đọc báo thì việc sử dụng <span class="text">float </span> có thể xem như rất
+                        khó khăn cho các lập trình viên do phải thiết kế web trên nhiều thiết bị.</p>
+                    <br>
+                    <p>Từ đó dẫn tới sự ra đời của một thuộc tính mới nhằm đơn giản hóa việc sắp xếp bố cục trong thiết
+                        kế.</p>
+                    <br>
+                    <div class="present"># Thuộc tính Display: Flex</div><br>
+                    <p>Để sử dụng flex trong css thì đơn giản là chúng ta chỉ cần sử dụng thuộc tính <span
+                            class="text">display: flex</span>. Mình có 1 ví dụ cơ bản dưới đây :</p><br>
+                    <div class="example example-one">
+                        <!-- &lt và &gt dùng để tạo 2 kí tự <> trong html-->
+                        &lt<span class="example-text-one">div </span><span class="example-text-three">class</span>=<span
+                            class="example-text-two">"box"</span> &gt <br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp &lt<span class="example-text-one">div</span> <span
+                            class="example-text-three">class</span>=<span class="example-text-two">"item"</span>
+                        &gt&lt/<span class="example-text-one">div</span>&gt<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&lt<span class="example-text-one">div</span> <span
+                            class="example-text-three">class</span>=<span class="example-text-two">"item"</span>
+                        &gt&lt/<span class="example-text-one">div</span>&gt<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&lt<span class="example-text-one">div</span> <span
+                            class="example-text-three">class</span>=<span class="example-text-two">"item"</span>
+                        &gt&lt/<span class="example-text-one">div</span>&gt<br>
+                        &lt/<span class="example-text-one">div></span>
+                    </div>
+                    <br>
+                    <p>Và sau đó mình dùng css như thế này :</p><br>
+                    <div class="example example-two">
+                        .box { <br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp <span class="example-text-one">display</span> : <span
+                            class="example-text-four">flex</span> ; <br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp <span class="example-text-one">width</span> : <span
+                            class="example-text-four">100%</span>;<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp <span class="example-text-one">background-color</span> : <span
+                            class="example-text-four">skyblue</span>;<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp <span class="example-text-one">height</span> : <span
+                            class="example-text-four">auto</span>;<br>
+                        }
+                        <!--&nbsp dùng để tạo dấu cách trong html-->
+                    </div>
+                    <br>
+                    <div class="nextpage">
+                        <a href="#">&lt Trang trước</a>
+                        <a href="#">Trang tiếp theo &gt</a>
+                    </div>
+                    <div>
+                        <!-đoạn mã php bắt đầu từ đây-->
+                    </div>
+                    <form action="" method="post" class="form-admin">
+                        <i class="fas fa-user-shield"></i>
+                        <span class="text" style="color:var(--black)">Họ tên</span> <input type="text" name="fullname"
+                          autocomplete="off"  value=""><br>
+                        <span class="text" style="color:var(--black)"> Mật khẩu </span><input type="password"
+                        autocomplete="off" name="password" value=""><br>
+                        <button type="submit" class="button" style="color:var(--black)" formaction="#footer">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
+<!--đây là phần bình luận-->
+            <div class="content">
+                <div class="content-section">
+                <form action="" method="post" class="form-comment">
+                    <textarea placeholder="Tham gia bình luận" name="cmt" class="comment"></textarea>
+                    <div class="comment-info">
+                        <div>
+                        <i class="far fa-user"></i>
+                         <input placeholder="Tên bạn *" type="text" name="cmt-name" class="comment-name"
+                         autocomplete="off" value="">
+                        <br>
+                        <i class="far fa-envelope"></i>
+                         <input placeholder="Email *" type="text" name="cmt-email" class="comment-name"
+                         autocomplete="off" value=""><br>
+                    </div>
+                    <button type="submit" class="comment-button" formaction="#footer">ĐĂNG BÌNH LUẬN NÀO</button>
+                    </div>
+                </form>
+                <!-đoạn mã php bắt đầu từ đây-->
+                <br>
+                    <a href="#" class="nextpage"style='color: var(--nextpage);
+                    font-family: "Dancing Script", cursive;display:inline;'> &lt Trở về đầu trang</a>
+                </div>
+            </div>  
+        </div>
+        <div class="footer">
+            <div class="footer-info">
+            <div class="footer-info-list">
+                <span>HỌC PHẦN THIẾT KẾ WEB</span><br>
+                <span>Mã LHP: 2020ECIT0731</span><br>
+                <span>Giáo viên giảng dạy: Bùi Quang Trường</span><br>
+                <span>Số lượng tín chỉ: 3</span><br> 
+            </div>
+            <div class="footer-info-list">
+                <span>NHÓM 5</span><br>
+                <span>Số lượng thành viên: 9</span><br>
+                <span>Chức vụ: nhóm trưởng</span><br>
+                
+            </div>
+            <div class="footer-info-list">
+                <span>THÔNG TIN LIÊN HỆ</span><br>
+                <span>Tô Nguyễn Đức Mạnh</span><br>
+                <span>Lớp: K54I5</span><br>
+                <span>fb.com/tonguyenducmanh</span><br>
+            </div>
+        </div>
+        <div id="footer">Copyright &copy 2020 this website is made with <span
+                style="color:rgb(240, 50, 107)">&#10084</span> by TMUER</a></div>
+        <!--&#10084 là mã dùng trong html để hiển thị ra biểu tượng hình trái tim-->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </div>
+        <!--đoạn mã js bắt đầu từ đây-->
+        <script src="script.js">
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+:root {
+  --white: white;
+  --black: black;
+  --gray: #f0f2f5;
+  --green: #151935;
+  --nextpage: rgb(23, 205, 255);
+  --shadow: rgba(9, 38, 46, 0.6);
+}
+/*khai báo biến màu cho nền sáng và nền tối */
+[data-theme="dark"] {
+  --white: #151935;
+  --black: white;
+  --gray: #1c2340;
+  --green: #39ef7c;
+  --nextpage: rgb(23, 255, 158);
+  --shadow: rgb(23, 205, 255, 0.3);
+}
+/*khai báo font chữ cho toàn bộ web*/
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+  cursor: url(http://cur.cursors-4u.net/cursors/cur-11/cur1054.cur), auto !important;
+}
+/*thuộc tính dưới đây dùng để định dạng thanh cuộn trang*/
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+}
+::selection {
+  background:#d3d3d3; 
+  color:#555;
+}
+::-moz-selection {
+  background:#d3d3d3; 
+  color:#555;
+}
+::-webkit-selection {
+  background:#d3d3d3; 
+  color:#555;
+}
+.logo {
+  background-color: var(--white);
+}
+.logo-img {
+  width: 10%;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+}
+#section {
+  background-color: var(--gray);
+}
+#header {
+  background-color: var(--white);
+  padding: 10px;
+  text-align: center;
+}
+#header > div:nth-child(1) {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+#header > div:nth-child(2) {
+  font-size: 20px;
+  font-weight: 480;
+}
+#menu {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  position: relative;
+}
+
+#menu li > .submenu {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#menu li:hover > .submenu {
+  display: block;
+  position: absolute;
+  background-color: var(--white);
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: -40px;
+  width: 190px;
+  text-align: left;
+  box-shadow: 0px 2px 10px var(--shadow);
+}
+li {
+  padding: 15px 20px;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  padding: 5px;
+}
+a:link {
+  color: var(--black);
+}
+a:visited {
+  color: var(--black);
+}
+a:hover {
+  cursor: url(http://ani.cursors-4u.net/cursors/cur-12/cur1080.cur), auto !important;
+  color: transparent;
+  background-image: linear-gradient(to right, #1dc7e7, #1fe6b8);
+  -webkit-background-clip: text;
+}
+.content {
+  padding: 3% 15%;
+  text-align: left;
+}
+.content-header {
+  text-align: center;
+  margin: 20px;
+}
+.content-title {
+  color: var(--green);
+  font-size: 50px;
+  text-align: center;
+  font-weight: 600;
+}
+.content-info {
+  color: var(--white);
+  padding: 10px;
+}
+.content-author {
+  color: var(--black);
+  font-weight: 600;
+}
+.content-section {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0px 2px 10px var(--shadow);
+}
+.present {
+  font-family: "Dancing Script", cursive;
+  font-size: 22px;
+  font-weight: 700;
+}
+.text {
+  font-family: "Dancing Script", cursive;
+  color: rgb(255, 51, 51);
+  font-weight: 700;
+  font-size: 1, 4rem;
+}
+.example {
+  background-color: #1e2431;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+}
+.example-one {
+  color: #fffcec;
+}
+.example-two {
+  color: #ffd465;
+}
+.example-text-one {
+  color: rgb(23, 205, 255);
+}
+.example-text-two {
+  color: #a9e068;
+}
+.example-text-three {
+  color: #ffd16d;
+}
+.example-text-four {
+  color: #ff9a6b;
+}
+.nextpage {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+.nextpage > a:link {
+  color: var(--nextpage);
+  font-family: "Dancing Script", cursive;
+}
+.nextpage > a:visited {
+  color: var(--nextpage);
+  font-family: "Dancing Script", cursive;
+}
+/*tùy chỉnh ô đăng nhập*/
+.form-admin {
+  text-align: right;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 2% 0% -2% 80%;
+  box-shadow: 0px 2px 10px var(--shadow);
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  width: 10%;
+  z-index: 1000;
+}
+input {
+  cursor: url(http://ani.cursors-4u.net/cursors/cur-12/cur1080.cur), auto !important; 
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 5px;
+}
+.button {
+  cursor: url(http://ani.cursors-4u.net/cursors/cur-12/cur1080.cur), auto !important;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+}
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+/*cố định vị trí cho checkbox theme*/
+.theme-switch {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 60px;
+}
+.theme-switch input {
+  display: none;
+}
+.slider {
+  cursor: url(http://ani.cursors-4u.net/cursors/cur-12/cur1080.cur), auto !important;
+  background-color: #c3c5c9;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.8s;
+}
+.slider:before {
+  background-color: white;
+  bottom: 4px;
+  content: "";
+  height: 23px;
+  left: 4px;
+  position: absolute;
+  transition: 0.8s;
+  width: 23px;
+}
+input:checked + .slider {
+  background-color: var(--green);
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+.comment{
+  cursor: url(http://ani.cursors-4u.net/cursors/cur-12/cur1080.cur), auto !important;
+  width: 100%;
+  height: 100px;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 2px;
+}
+.comment-name{
+  margin: 2px;
+  margin-bottom: 4px;
+  width: 150%;
+  padding: 10px;
+  border-radius: 10px;
+  padding-left: 40px;
+}
+.comment-info{
+  display: flex;
+  justify-content: space-between;
+}
+.comment-button{
+  cursor: url(http://ani.cursors-4u.net/cursors/cur-12/cur1080.cur), auto !important;
+  background-image: linear-gradient(to right, #1dc7e7, #1fe6b8);
+  height: 40px;
+  border: none;
+  width: 180px;
+  margin: 20px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 20px rgba(45, 163, 196, 0.6);
+  cursor: pointer;;
+}
+.comment-info i{
+  position: absolute;
+  padding: 15px;
+  color: var(--green);
+}
+#footer {
+  padding: 15px;
+  text-align: center;
+}
+.footer{
+  background-color: var(--white);
+}
+.footer-info{
+  display: flex;
+  justify-content: center;
+}
+.footer-info-list{
+  padding: 40px;
+}
+.footer-info-list :nth-child(1){
+  color: transparent;
+  background-image: linear-gradient(to right, #1dc7e7, #1fe6b8);
+  -webkit-background-clip: text;
+}
+
